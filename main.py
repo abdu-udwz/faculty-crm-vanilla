@@ -1,17 +1,13 @@
-import faculty
-import storage
+import tkinter as tk
+import scene
 
 
 def main():
-    # creating a person/student/...etc
-    s = faculty.Student('S Name', 'Birthday', 'NID', 's number', 'dep')
-    # saving object/ updating object
-    storage.save(s)
+    root = tk.Tk()
+    main_scene = scene.Scene(root)
+    main_scene.pack(fill="both", expand=True)
 
-    # get all saved objects of a type
-    storage.get(faculty.Person) # replace .Person with the required type
-    # get saved object by national id
-    storage.get_one(faculty.Teacher, 'teachers NID')
+    root.mainloop()
 
 
 if __name__ == '__main__':
