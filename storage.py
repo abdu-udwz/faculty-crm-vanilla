@@ -11,6 +11,8 @@ import pickle
 import pathlib
 
 from storable import Storable
+# do not remove the following import
+# needed for "unpickle" to work
 import faculty
 
 PICKLE_FILE = 'my_db'
